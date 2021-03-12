@@ -1,5 +1,3 @@
-완성된 코드 한 번 더 보냅니다
-
 #import dataset from EEGLAB
 from oct2py import octave
 
