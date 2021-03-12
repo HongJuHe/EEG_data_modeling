@@ -1,3 +1,5 @@
+완성된 코드 한 번 더 보냅니다
+
 #import dataset from EEGLAB
 from oct2py import octave
 
@@ -17,14 +19,14 @@ EEG = octave.pop_loadset('C:/Program Files/MATLAB/eeglab_current/eeglab2021.0/pr
 
 #plot first trail of channel 1
 import matplotlib.pyplot as plt
-plt.plot(EEG.data[10][0:249000])
-plt.show()
+#plt.plot(EEG.data[10][0:249000])
+#plt.show()
 
 EEG_data = EEG
-EEG_data.data = EEG.data[10][0:249000]
+EEG_data.data = EEG.data[:][0:248000]
 EEG2 = octave.pop_eegfiltnew(EEG_data, 0.5, 100, [], 0, [], 0) 
 
-plt.plot(EEG2.data[10][0:249000])
+plt.plot(EEG2.data[0][0:248000])
 plt.show()
 
 #AnalyName = 'ica';
